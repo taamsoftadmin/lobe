@@ -56,7 +56,7 @@ services:
     image: lobehub/lobe-chat-database
     container_name: lobe-chat
     ports:
-      - '7007:3210'
+      - '3210:3210'
     depends_on:
       - postgresql
       # - minio

@@ -64,8 +64,8 @@ services:
     env_file:
       - .env
     environment:
-          - OPENAI_API_KEY: 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
-          - OPENAI_PROXY_URL: https://api.openai.com/v1
+        - OPENAI_API_KEY: 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
+        - OPENAI_PROXY_URL: https://api.openai.com/v1
           # - ACCESS_CODE: xxx
     #     # - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_bGFyZ2UtZ29yaWxsYS05MS5jbGVyay5hY2NvdW50cy5kZXYk
         # - CLERK_SECRET_KEY=sk_test_nq4eHLdlksZ4WlV7t45v9a1y2wKYohgnJNb7GzZv2q

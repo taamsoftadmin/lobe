@@ -61,6 +61,8 @@ services:
       - postgresql
       - minio
       - logto
+    env_file:
+      - .env
     environment:
       - APP_URL=https://chat.taam.cloud/
       - KEY_VAULTS_SECRET=Kix2wcUONd4CX51E/ZPAd36BqM4wzJgKjPtz2sGztqQ=

@@ -61,22 +61,22 @@ services:
       - postgresql
       - minio
       - logto
-    environment:
-      - APP_URL=https://chat.taam.cloud/
-      - KEY_VAULTS_SECRET=Kix2wcUONd4CX51E/ZPAd36BqM4wzJgKjPtz2sGztqQ=
-      - DATABASE_URL=postgresql://postgres:Tttt20142024@@postgresql:5432/lobe
-      - NEXT_AUTH_SECRET=15hMVluPE5Y0HWSaGEi12+zY2zgpda2tifpB8c6c+oo=
-      - NEXT_AUTH_SSO_PROVIDERS=logto
-      - NEXTAUTH_URL=https://chat.taam.cloud/api/auth
-      - AUTH_LOGTO_CLIENT_ID=5wetwreje63vxo2tp1iru
-      - AUTH_LOGTO_CLIENT_SECRET=brUbMUgYME08Tz0ZWd1Gbg6kG5zqN2YY
-      - AUTH_LOGTO_ISSUER=https://4523q9.logto.app/oidc
-      - S3_ACCESS_KEY_ID=EW0tBjlYAFRWe0jNKHKs
-      - S3_SECRET_ACCESS_KEY=CtgBiZKdL5uL5DL8ucRfdvqiRPOFe4udelmS4pLc
-      - S3_ENDPOINT=https://s3-api.taam.cloud
-      - S3_BUCKET=lobe
-      - S3_PUBLIC_DOMAIN=https://s3-api.taam.cloud
-      - S3_ENABLE_PATH_STYLE=1
+    # environment:
+    #   - APP_URL=https://chat.taam.cloud/
+    #   - KEY_VAULTS_SECRET=Kix2wcUONd4CX51E/ZPAd36BqM4wzJgKjPtz2sGztqQ=
+    #   - DATABASE_URL=postgresql://postgres:Tttt20142024@@postgresql:5432/lobe
+    #   - NEXT_AUTH_SECRET=15hMVluPE5Y0HWSaGEi12+zY2zgpda2tifpB8c6c+oo=
+    #   - NEXT_AUTH_SSO_PROVIDERS=logto
+    #   - NEXTAUTH_URL=https://chat.taam.cloud/api/auth
+    #   - AUTH_LOGTO_CLIENT_ID=5wetwreje63vxo2tp1iru
+    #   - AUTH_LOGTO_CLIENT_SECRET=brUbMUgYME08Tz0ZWd1Gbg6kG5zqN2YY
+    #   - AUTH_LOGTO_ISSUER=https://4523q9.logto.app/oidc
+    #   - S3_ACCESS_KEY_ID=EW0tBjlYAFRWe0jNKHKs
+    #   - S3_SECRET_ACCESS_KEY=CtgBiZKdL5uL5DL8ucRfdvqiRPOFe4udelmS4pLc
+    #   - S3_ENDPOINT=https://s3-api.taam.cloud
+    #   - S3_BUCKET=lobe
+    #   - S3_PUBLIC_DOMAIN=https://s3-api.taam.cloud
+    #   - S3_ENABLE_PATH_STYLE=1
     restart: always
 
 volumes:

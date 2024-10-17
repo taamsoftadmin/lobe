@@ -71,6 +71,7 @@ services:
       - '3210:3210'
     depends_on:
       - postgresql
+      - zitadel
       # - minio
       # - logto
     env_file:

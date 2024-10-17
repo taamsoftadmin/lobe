@@ -51,7 +51,19 @@ services:
       - ENDPOINT=https://logto-auth.taam.cloud  # Updated your Logto API domain
       - ADMIN_ENDPOINT=https://logto-ui.taam.cloud  # Updated your Logto UI domain
     entrypoint: ['sh', '-c', 'npm run cli db seed -- --swe && npm start']
-
+  zitadel:
+    restart: always
+    image: ghcr.io/zitadel/zitadel:latest
+    container_name: lobe-zitadel
+    command: start-from-init --config /zitadel-config.yaml --steps /zitadel-init-steps.yaml --masterkey "cft3Tekr/rQBOqwoQSCPoncA9BHbn7QJ" --tlsMode external #MasterkeyNeedsToHave32Characters
+    ports:
+      - 8080:8080
+    volumes:
+      - ./zitadel-config.yaml:/zitadel-config.yaml:ro
+      - ./zitadel-init-steps.yaml:/zitadel-init-steps.yaml:ro
+    depends_on:
+      postgresql:
+        condition: service_healthy
   lobe:
     image: lobehub/lobe-chat-database
     container_name: lobe-chat

@@ -4,7 +4,7 @@ services:
     networks:
       - 'zitadel'
     image: 'ghcr.io/zitadel/zitadel:latest'
-    command: 'start-from-init --masterkey "AOf5L3mtWymgIyKJ0MAfrkEyjB41l6yN8JP/T6TYfC4=" --tlsMode disabled'
+    command: 'start-from-init --masterkey "5ad680a96a3d02d21cf92f0492f8447b7906a74fef479aae84ec1105c2adcf9d" --tlsMode disabled'
     environment:
       - 'ZITADEL_DATABASE_POSTGRES_HOST=db'
       - 'ZITADEL_DATABASE_POSTGRES_PORT=5432'

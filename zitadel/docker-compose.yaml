@@ -1,10 +1,12 @@
+version: '3.8'
+
 services:
   zitadel:
     restart: 'always'
     networks:
       - 'zitadel'
     image: 'ghcr.io/zitadel/zitadel:latest'
-    command: 'start-from-init --masterkey "Your32CharacterMasterkey" --tlsMode disabled'
+    command: 'start-from-init --masterkey "AOf5L3mtWymgIyKJ0MAfrkEyjB41l6yN8JP/T6TYfC4=" --tlsMode disabled'
     environment:
       - 'ZITADEL_DATABASE_POSTGRES_HOST=db'
       - 'ZITADEL_DATABASE_POSTGRES_PORT=5432'
@@ -15,8 +17,7 @@ services:
       - 'ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME=postgres'
       - 'ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD=postgres'
       - 'ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE=disable'
-      - 'ZITADEL_EXTERNALSECURE=true'  # This enables HTTPS (set to true for secure domain)
-      - 'ZITADEL_EXTERNALDOMAIN=zitadel.taam.cloud'  # Your external domain
+      - 'ZITADEL_EXTERNALSECURE=false'
       - 'ZITADEL_FIRSTINSTANCE_MACHINEKEYPATH=/machinekey/zitadel-admin-sa.json'
       - 'ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_USERNAME=zitadel-admin-sa'
       - 'ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_NAME=Admin'

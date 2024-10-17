@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   zitadel:
     restart: 'always'
@@ -17,7 +15,8 @@ services:
       - 'ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME=postgres'
       - 'ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD=postgres'
       - 'ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE=disable'
-      - 'ZITADEL_EXTERNALSECURE=false'
+      - 'ZITADEL_EXTERNALSECURE=true'  # This enables HTTPS (set to true for secure domain)
+      - 'ZITADEL_EXTERNALDOMAIN=zitadel.taam.cloud'  # Your external domain
       - 'ZITADEL_FIRSTINSTANCE_MACHINEKEYPATH=/machinekey/zitadel-admin-sa.json'
       - 'ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_USERNAME=zitadel-admin-sa'
       - 'ZITADEL_FIRSTINSTANCE_ORG_MACHINE_MACHINE_NAME=Admin'

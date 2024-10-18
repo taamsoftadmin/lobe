@@ -66,7 +66,7 @@ services:
     entrypoint: ['sh', '-c', 'npm run cli db seed -- --swe && npm start']
 
   lobe:
-    image: bentwng/lobe-chat-database
+    image: lobehub/lobe-chat-database
     container_name: lobe-chat
     ports:
       - '3210:3210'

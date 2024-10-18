@@ -100,9 +100,9 @@ services:
       - AUTH_AUTH0_ID=qrPtkmDpkq4oSZiglyYNLVwY04RMbbI4
       - AUTH_AUTH0_SECRET=MuyPlmsa1LfLZ-EprUmbVd_EZ3WASiFpwEejJMmo7xEg20cqxTiVkKSb4hPWUz7D
       - AUTH_AUTH0_ISSUER=dev-qdjfyjvpgh6l1pz5.us.auth0.com
-      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_YWxsb3dlZC10dXJ0bGUtOTcuY2xlcmsuYWNjb3VudHMuZGV2JA
-      - CLERK_SECRET_KEY=sk_test_9XNa7KsSKABFe7sAEpyUiKjJnvpRuKO4xjfw7tnTZh
-      - CLERK_WEBHOOK_SECRET=whsec_muh6xP+Srnkvb3nL9mpiX1SuPFVvU8qU
+      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_live_Y2xlcmsudGFhbS5jbG91ZCQ
+      - CLERK_SECRET_KEY=live_WVnqZ5lIpTOkAjfwYILebzlG0TX4Y6GlXLROyIg6BA
+      - CLERK_WEBHOOK_SECRET=whsec_Qlpr9nJ0Y7fqDC3u9YRiLRFVahbcOW5Y
 
 
     restart: always

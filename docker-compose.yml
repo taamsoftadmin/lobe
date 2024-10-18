@@ -76,33 +76,32 @@ services:
 
       # - minio
       - logto
-    environment:
-      - APP_URL=https://chat.taam.cloud/
-      - KEY_VAULTS_SECRET=Li4ENBYEXxwcVmrws6q5uN0YMNEU8toR
-      - DATABASE_URL=postgresql://postgres:Tttt20142024@@postgresql:5432/lobe
-      - NEXT_AUTH_SECRET=Li4ENBYEXxwcVmrws6q5uN0YMNEU8toR
-      # - NEXT_AUTH_SSO_PROVIDERS=logto
-      - NEXTAUTH_URL=https://chat.taam.cloud/api/auth
-      - AUTH_LOGTO_CLIENT_ID=i2ld4dnsn7prwjlwxyqfe
-      - AUTH_LOGTO_CLIENT_SECRET=H2mYBNqRmpcg97EPDzybB85YFT23ElsY
-      - AUTH_LOGTO_ISSUER=https://logto-auth.taam.cloud/oidc
-      - S3_ACCESS_KEY_ID=fTr9ohkVWVABP8MEi0cT
-      - S3_SECRET_ACCESS_KEY=AKlscY3VHfZwpB8Y5hbACbxdXqO04PVaiHKyhD60
-      - S3_ENDPOINT=https://minio-rswcs08occcww0oss4s04kks.taam.info
-      - S3_BUCKET=lobe
-      - S3_PUBLIC_DOMAIN=https://minio-rswcs08occcww0oss4s04kks.taam.info
-      - S3_ENABLE_PATH_STYLE=1
-      - OPENAI_API_KEY=sk-kZLselex1ebfBMcdpP9jfMpy3Wj_L0L4T_EmpSPk9JT3BlbkFJxZWa-uvUMdOL_QRRfIZtvcC9RBSY6c8ismfm14HfsA
-      - OPENAI_PROXY_URL=https://api.openai.com/v1
-      - AUTH_GITHUB_ID=Iv23liWrPJgPstVLEzuM
-      - AUTH_GITHUB_SECRET=daa05926926dac67cd207adc29709dfed21ca3e8
-      - NEXTAUTH_URL=https://chat.taam.cloud/api/auth
-      - AUTH_AUTH0_ID=qrPtkmDpkq4oSZiglyYNLVwY04RMbbI4
-      - AUTH_AUTH0_SECRET=MuyPlmsa1LfLZ-EprUmbVd_EZ3WASiFpwEejJMmo7xEg20cqxTiVkKSb4hPWUz7D
-      - AUTH_AUTH0_ISSUER=dev-qdjfyjvpgh6l1pz5.us.auth0.com
-      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_live_Y2xlcmsudGFhbS5jbG91ZCQ
-      - CLERK_SECRET_KEY=live_WVnqZ5lIpTOkAjfwYILebzlG0TX4Y6GlXLROyIg6BA
-      - CLERK_WEBHOOK_SECRET=whsec_Qlpr9nJ0Y7fqDC3u9YRiLRFVahbcOW5Y
+    env_file:
+      - .env
+    # environment:
+    #   - APP_URL=https://chat.taam.cloud/
+    #   - KEY_VAULTS_SECRET=Li4ENBYEXxwcVmrws6q5uN0YMNEU8toR
+    #   - DATABASE_URL=postgresql://postgres:Tttt20142024@@postgresql:5432/lobe
+    #   - NEXT_AUTH_SECRET=Li4ENBYEXxwcVmrws6q5uN0YMNEU8toR
+    #   - NEXT_AUTH_SSO_PROVIDERS=logto
+    #   - NEXTAUTH_URL=https://chat.taam.cloud/api/auth
+    #   - AUTH_LOGTO_CLIENT_ID=i2ld4dnsn7prwjlwxyqfe
+    #   - AUTH_LOGTO_CLIENT_SECRET=H2mYBNqRmpcg97EPDzybB85YFT23ElsY
+    #   - AUTH_LOGTO_ISSUER=https://logto-auth.taam.cloud/oidc
+    #   - S3_ACCESS_KEY_ID=fTr9ohkVWVABP8MEi0cT
+    #   - S3_SECRET_ACCESS_KEY=AKlscY3VHfZwpB8Y5hbACbxdXqO04PVaiHKyhD60
+    #   - S3_ENDPOINT=https://minio-rswcs08occcww0oss4s04kks.taam.info
+    #   - S3_BUCKET=lobe
+    #   - S3_PUBLIC_DOMAIN=https://minio-rswcs08occcww0oss4s04kks.taam.info
+    #   - S3_ENABLE_PATH_STYLE=1
+    #   - OPENAI_API_KEY=sk-kZLselex1ebfBMcdpP9jfMpy3Wj_L0L4T_EmpSPk9JT3BlbkFJxZWa-uvUMdOL_QRRfIZtvcC9RBSY6c8ismfm14HfsA
+    #   - OPENAI_PROXY_URL=https://api.openai.com/v1
+    #   - AUTH_GITHUB_ID=Iv23liWrPJgPstVLEzuM
+    #   - AUTH_GITHUB_SECRET=daa05926926dac67cd207adc29709dfed21ca3e8
+    #   - NEXTAUTH_URL=https://chat.taam.cloud/api/auth
+    #   - AUTH_AUTH0_ID=qrPtkmDpkq4oSZiglyYNLVwY04RMbbI4
+    #   - AUTH_AUTH0_SECRET=MuyPlmsa1LfLZ-EprUmbVd_EZ3WASiFpwEejJMmo7xEg20cqxTiVkKSb4hPWUz7D
+    #   - AUTH_AUTH0_ISSUER=dev-qdjfyjvpgh6l1pz5.us.auth0.com
 
 
     restart: always
